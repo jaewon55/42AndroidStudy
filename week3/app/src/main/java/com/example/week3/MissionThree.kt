@@ -6,9 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.week3.databinding.FragmentMissionThreeBinding
 
-private lateinit var binding: FragmentMissionThreeBinding
 
 class MissionThree : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,7 +17,6 @@ class MissionThree : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentMissionThreeBinding.inflate(inflater, container, false)
-        return binding.root
+        return inflater.inflate(R.layout.fragment_mission_three, container, false)
     }
 }
