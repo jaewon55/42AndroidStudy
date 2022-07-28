@@ -4,16 +4,26 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.166" />
+        <entry key="app/src/main/res/drawable/blank_rectangle.xml" value="0.166" />
+        <entry key="app/src/main/res/drawable/blank_rectangle_pressed.xml" value="0.166" />
+        <entry key="app/src/main/res/drawable/blank_selector.xml" value="0.166" />
+        <entry key="app/src/main/res/drawable/full_rectangle.xml" value="0.166" />
+        <entry key="app/src/main/res/drawable/full_rectangle_pressed.xml" value="0.166" />
+        <entry key="app/src/main/res/drawable/full_selector.xml" value="0.166" />
         <entry key="app/src/main/res/drawable/ic_baseline_arrow_drop_down_24.xml" value="0.166" />
         <entry key="app/src/main/res/drawable/ic_baseline_arrow_drop_up_24.xml" value="0.166" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/baseline.xml" value="0.28229166666666666" />
         <entry key="app/src/main/res/layout/fragment_frame_layout_test.xml" value="0.30512820512820515" />
+        <entry key="app/src/main/res/layout/fragment_land_test.xml" value="0.3098958333333333" />
+        <entry key="app/src/main/res/layout/fragment_mission_four.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/layout/fragment_mission_one.xml" value="0.28331332533013204" />
+        <entry key="app/src/main/res/layout/fragment_mission_three.xml" value="0.3098958333333333" />
         <entry key="app/src/main/res/layout/fragment_mission_two.xml" value="0.21851851851851853" />
         <entry key="app/src/main/res/layout/fragment_scroll_view_test.xml" value="0.21851851851851853" />
         <entry key="app/src/main/res/layout/padding.xml" value="0.28229166666666666" />
         <entry key="app/src/main/res/layout/weight.xml" value="0.28229166666666666" />
+        <entry key="app/src/main/res/layout/widgettest.xml" value="0.15520833333333334" />
       </map>
     </option>
   </component>
