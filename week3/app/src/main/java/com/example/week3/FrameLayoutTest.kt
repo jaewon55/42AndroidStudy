@@ -23,21 +23,24 @@ class FrameLayoutTest : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentFrameLayoutTestBinding.inflate(inflater, container, false)
-        imageView = binding.imageView
-        imageView2 = binding.imageView2
-        binding.button.setOnClickListener { changeImage() }
+        setButtonListener()
         return binding.root
     }
 
-    private fun changeImage() {
-        if (imageIndex == 0) {
-            imageView.visibility = View.VISIBLE
-            imageView2.visibility = View.INVISIBLE
-            imageIndex = 1
-        } else if (imageIndex == 1) {
-            imageView.visibility = View.INVISIBLE
-            imageView2.visibility = View.VISIBLE
-            imageIndex = 0
+    private fun setButtonListener() {
+        imageView = binding.imageView
+        imageView2 = binding.imageView2
+        binding.button.setOnClickListener {
+            imageIndex = if (imageIndex == 0) {
+                imageView.visibility = View.VISIBLE
+                imageView2.visibility = View.INVISIBLE
+                1
+            } else {
+                imageView.visibility = View.INVISIBLE
+                imageView2.visibility = View.VISIBLE
+                0
+            }
         }
     }
+
 }

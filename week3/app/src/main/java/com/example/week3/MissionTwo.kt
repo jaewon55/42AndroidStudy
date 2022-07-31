@@ -25,26 +25,31 @@ class MissionTwo : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentMissionTwoBinding.inflate(inflater, container, false)
-        editText = binding.editText
-        textView = binding.letterCnt
-        editText.addTextChangedListener { countLetter() }
-        binding.sendBtn.setOnClickListener { sendMessage() }
+        textChanged()
+        setButtonListener()
         return binding.root
     }
 
-    private fun countLetter() {
-        val text = "${editText.text.length} / 80 바이트"
-        textView.text = text
+    private fun textChanged() {
+        editText = binding.editText
+        textView = binding.letterCnt
+        editText.addTextChangedListener {
+            val text = "${editText.text.length} / 80 바이트"
+            textView.text = text
+        }
     }
 
-    private fun sendMessage() {
-        var toastMessage: String
-        if (editText.text.isEmpty())
-            toastMessage = "메세지를 입력해주세요"
-        else
-            toastMessage = editText.text.toString()
-        Toast.makeText(context, toastMessage, Toast.LENGTH_SHORT).show()
-        editText.text.clear()
+    private fun setButtonListener() {
+        binding.sendBtn.setOnClickListener {
+            val toastMessage =
+                if (editText.text.isEmpty()) "메세지를 입력해주세요" else editText.text.toString()
+            Toast.makeText(context, toastMessage, Toast.LENGTH_SHORT).show()
+            editText.text.clear()
+        }
+
+        binding.closeBtn.setOnClickListener {
+            editText.text.clear()
+        }
     }
 
 }
