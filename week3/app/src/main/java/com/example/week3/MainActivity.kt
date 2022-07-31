@@ -45,20 +45,17 @@ class MainActivity : AppCompatActivity(), CoroutineScope {
     }
 
     override fun onBackPressed() {
-        if (pager.currentItem == 0) {
-            when (isTerminate) {
-                false -> {
-                    Toast.makeText(this, BACK_PRESS_MESSAGE, Toast.LENGTH_SHORT).show()
-                    isTerminate = true
-                    launch {
-                        delay(2500)
-                        isTerminate = false
-                    }
-                }
-                else -> super.onBackPressed()
+        if (pager.currentItem > 0) {
+            pager.currentItem--
+        } else if (!isTerminate) {
+            Toast.makeText(this, BACK_PRESS_MESSAGE, Toast.LENGTH_SHORT).show()
+            isTerminate = true
+            launch {
+                delay(2500)
+                isTerminate = false
             }
         } else {
-            pager.currentItem--
+            super.onBackPressed()
         }
     }
 
