@@ -15,12 +15,13 @@ import kotlin.coroutines.CoroutineContext
 
 private const val NUM_PAGES = 7
 private const val BACK_PRESS_MESSAGE = "'뒤로' 버튼을 한번 더 누르시면 종료됩니다."
-private lateinit var binding: ActivityMainBinding
-private lateinit var pager: ViewPager2
-private var isTerminate = false
+
+
 
 class MainActivity : AppCompatActivity(), CoroutineScope {
-
+    private lateinit var binding: ActivityMainBinding
+    private lateinit var pager: ViewPager2
+    private var isTerminate = false
     private val job: Job = Job()
 
     override val coroutineContext: CoroutineContext

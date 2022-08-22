@@ -14,8 +14,8 @@ import com.example.week3.databinding.FragmentMissionTwoBinding
 private lateinit var binding: FragmentMissionTwoBinding
 
 class MissionTwo : Fragment() {
-    private lateinit var editText: EditText
     private lateinit var textView: TextView
+    private lateinit var editText: EditText
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
