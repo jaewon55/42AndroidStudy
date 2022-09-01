@@ -63,12 +63,16 @@ class MissionOne : Fragment(), DatePickerDialog.OnDateSetListener {
         val name = binding.nameText
         val age = binding.ageText
         binding.saveButton.setOnClickListener {
-            val message = if (name.text.isEmpty()) {
-                "이름을 입력해 주세요."
-            } else if (age.text.isEmpty()) {
-                "나이를 입력해 주세요."
-            } else {
-                name.text.toString() + "|" + age.text.toString() + "|" + dateText.text
+            val message = when {
+                name.text.isEmpty() -> {
+                    "이름을 입력해 주세요."
+                }
+                age.text.isEmpty() -> {
+                    "나이를 입력해 주세요."
+                }
+                else -> {
+                    name.text.toString() + "|" + age.text.toString() + "|" + dateText.text
+                }
             }
             Toast.makeText(requireContext(), message, Toast.LENGTH_SHORT).show()
         }
